@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	Schedule
+</title>
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-26190090-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+    <script type="text/javascript" src="http://use.typekit.com/pyv2clk.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><meta name="Generator" content="Sitefinity 5.0.2860.0 SB" /><link href="/Telerik.Web.UI.WebResource.axd?compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2012.1.215.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen%3a10f0c383-ac8b-4840-af99-28b79d3cbef1%3a8cee9284%3a580b2269%3bTelerik.Web.UI.Skins%2c+Version%3d2012.1.215.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen%3ab77c524c-50b0-446e-81f3-483d69ea19db%3a7a57e389%3a6c8ef648" type="text/css" rel="stylesheet" /><link href="/Sitefinity/WebsiteTemplates/M3Conf/App_Themes/M3Conf/global/reset.css" type="text/css" rel="stylesheet" /><link href="/Sitefinity/WebsiteTemplates/M3Conf/App_Themes/M3Conf/global/layout.css" type="text/css" rel="stylesheet" /><link href="/Sitefinity/WebsiteTemplates/M3Conf/App_Themes/M3Conf/global/nivo.css" type="text/css" rel="stylesheet" /></head>
+
+<body>
+	<!--[if lt IE 9]>
+		<link href="/Sitefinity/WebsiteTemplates/M3Conf/App_Themes/M3Conf/CSS/layout-ie.css" type="text/css" rel="stylesheet" />
+	<![endif]-->
+	<form method="post" action="schedule" id="form1">
+<input type="hidden" name="ctl05_TSSM" id="ctl05_TSSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQzMTk3NDE5NWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFRmN0bDAwJG1haW5OYXYkVDE1NEJERkVBMDEwJGN0bDAwJGN0bDAwJHNpdGVNYXBDb250cm9sX2hvcml6b250YWxzaW1wbGUFTWN0bDAwJHBoQXV4aWxpYXJ5TmF2JFQxNTRCREZFQTAxMSRjdGwwMCRjdGwwMCRzaXRlTWFwQ29udHJvbF9jdXN0b21uYXZpZ2F0aW9uJu/XBZwFR+U34cKlGZh7iPBqfrteBbjOjrsFjKR+ICI=" />
+
+
+<script src="/ScriptResource.axd?d=bPttF5i0ybx7vpXFAmmS7LIfIYijcc9MRfeAMV0kYErxkDpLNveYp_r-mRGYc0Oj7D3vYQlVMvTRKihFbsFKfOnORt8OKwPmQfy6yjsSwZHxKaG45TRvJbKEKGueE_qIjHU3-TaUqryoIJz6nbbtresBxtZ3yO3EJwRjrC3wrjy49Xo9BxA1yVQi783XOGWG0&amp;t=ffffffff940d030f" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=r00Ap8TOhb-fp14mfYlC2i_M3e99CNjxbNq7Vvayn59vSzIRE6kD0cCPx6ZPD7i2VDJL0X3yYriEhNXbXko_292YYNiUza5EgE2nYh9w4S4ZBPW-YtfCKJ_MB-iZyuiPxva8YFiDEs4YKQ_aV5N2s9BH34CXfjf3138e9a3Dd6W3jAVJs6W_lz7KkKyWfUxL0&amp;t=6c3b803e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_hSNIJjXBy_7pl79BHAdZQmPTNhmrel4fN7qo6zAp1IGP_7V1N9U8Y0imckpd9Y_dwz6vcOmB_MSgQ1eE0-0Ay2PawEx5OU4A0f_8btZWZ6VLOzUv4obRIL9YyuspiQLV2c5YrF5uZnUBULzf1VAeec1rdo4shlu6swvuFBeAIc_VhjY50z1TVQx2oQJFkm_JHWJjeXwTImcOa9nPw94Rg2&amp;t=6c3b803e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=EYXgL8A16kQsef9GgSkYU86Gao2MM_pHExQXQ5iw5-ABakH3CgLX4wjpzvNjqgOT3bxTiJy9iZpcn4T-jdL2Y4nfzcUrbP7rsGbfZDqO4Pw6bSOqpx6589XB9r7sZLpK4fLAR8zi3_BI8TU0MamMlVIvmG0IYHY-mmZc4YTuR1LKgoHrFsYfR_fJXKCpyfhpgM3Cicf1PNHYGdlyiWqnEQ2&amp;t=6c3b803e" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=K11JtM0TWMhoB1UrOyvyve6__diNzJV4oGAZT87qQt9c4qobFc0VerNWnDOGRbAAXR2dFPhUN7OWEsmZNJRrfKKiDcmvyVavZ4Jw7nqzFBAKKWvuyj86LlPvRd6we4gfoyAU0-jrPa5I1b3m9myi5w2&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Pe3477uXRyPBPDzfSB1PlLV8HBWtTTqmISWT77a9wjoop2KqCEz_kDlnzZFXerM1JvWpxGyWJnI1gj5toEKn3_lTwjAgLg6cS42tVoE73u2YihfZ6E6TsAd4RtjaCa8fBbfiqo45HATKTuuLGl9aCQ2&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ZGOySE8p3ZMlnkIO7b3woWdiXnnLMZoreYt9KbmCR8YAxalPLgubFJnE8H4m4d5h1S11oIpzy46PJJQ-ReUNXDycyooDGrzTyZSgnSwNA0i5iNJuoGS_Jkzea6a9_5JYafHqg9rbfUgyNPVZbm2njw2&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=O1c6q-WZxvMUEfQeNGYaqouaJYpBXAQvUjYOU_Ixc6QYDy8Cfbxh1fLY4qH2q5sUvrgNB0uJi0yZ7e2qfYXs-WPCoooDvcU_qJU4Kr3jwEGcC27L68oAm90xXSsg47mHeakNzyoLG0zCBWXgotIVlHl-v7cOtc6OzvrdGfH4mdk1&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=GApcV3LzGLPjVSVVGJziDDXYbqBhKmtbscAwCpV8ITWShxqbRw94heTTxLKKg4M_7jiIt4ktSHPiq7hlqew8_IqVOOEbZ7UOZh0fXtvtwLU5rTI2WIkYN_o3Zp2qifsQqsEHhsGNg9SOZQSVynmBqCsrD9tgu0est7fxLoxGvtc1&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=s6w_mTXyc12y0ZTzq2DXg1XOSHrvemQglAlgmz70oYhMycFdiZ1cjCs_4YfeVpgC1umz75KQ7gQ-qVUjChz6V78u7BwE71kYRPlSI0thQqal3YENUWytZPf_jMSvXCibeLRtD78WwsLtJaUpBNGYS5yMsKKVc-OJ3poA2H5KGkc1&amp;t=489f2010" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=TeUA6CS8qd7QDDfFMaIg0pOllwfISVLOPINxKhy0geXpM6Xry2qmxb38Sg3yDiTncwhV_bfLExyeeNktyohk2M1X4YbefrZQXMEOeXSgWVZ-qAMeAKxwp46jONhCHA8qtgYFOSB0aIVLaBDaImNDMQ2&amp;t=489f2010" type="text/javascript"></script>
+		
+		
+
+
+	
+		<div id="templateInterior">
+			<div id="containerMaster">
+				<div id="containerBranding">
+					<div class="logo">
+						
+<div class="sfContentBlock">
+	<a href="/home"><img src="/images/branding/m3_logo.png?sfvrsn=2" alt="M3 Conference Logo" title="M3 Conference Logo" /></a>
+
+
+
+</div>
+					</div>
+					<div class="content">
+						<div class="date">
+							
+<div class="sfContentBlock">
+	2012
+
+
+
+</div>
+						</div>
+						<div class="line1">
+							
+<div class="sfContentBlock">
+	M<sup>3</sup> Conference
+
+
+
+</div>
+						</div>
+						<div class="line2">
+							
+<div class="sfContentBlock">
+	<p>October 25-26</p> <p>Ohio Union</p> <p>Columbus, Ohio</p>
+
+
+
+</div>
+						</div>
+					</div>
+				</div>
+				<div id="containerMainNav">
+					
+<div id="mainNav_T154BDFEA010">
+	
+             <div id="ctl00_mainNav_T154BDFEA010_ctl00_ctl00_siteMapControl_horizontalsimple" class="RadTabStrip RadTabStrip_Sitefinity RadTabStripTop_Sitefinity">
+		<!-- 2012.1.215.40 --><div class="rtsLevel rtsLevel1">
+			<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink" href="about"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">About</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsBefore" href="venue"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Venue</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsSelected" href="schedule"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Schedule</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter" href="speakers"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Speakers</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="sponsorship"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Sponsorship</span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="follow"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Follow</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink" href="register"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Register</span></span></span></a></li></ul>
+		</div><input id="ctl00_mainNav_T154BDFEA010_ctl00_ctl00_siteMapControl_horizontalsimple_ClientState" name="ctl00_mainNav_T154BDFEA010_ctl00_ctl00_siteMapControl_horizontalsimple_ClientState" type="hidden" />
+	</div>
+        
+<script type="text/javascript">
+    
+
+    function radMenuOnClick(sender, args) {
+
+        var state = args.get_item().get_attributes().getAttribute("ExpandOnClick");
+        args.get_item().get_attributes().setAttribute("ExpandOnClick", "true")
+        args.get_item().open();
+    }
+
+    function radMenuOnOpening(sender, args) {
+        var state = args.get_item().get_attributes().getAttribute("ExpandOnClick");
+        if(state != "true")
+            args.set_cancel(true);
+        args.get_item().get_attributes().setAttribute("ExpandOnClick", "false")
+    }
+</script>
+
+</div>
+				</div>
+				<div id="containerMainContent">
+					<div class="pageTitle">
+						<h1>
+<div class="sfContentBlock">
+	Schedule
+
+
+
+</div></h1>
+					</div>
+					<div class="columnSingle">
+						
+<div class="sfContentBlock">
+	<div class="ribbon"> <p>Day 1</p> </div> <br /> <table class="schedule"> <tbody> <tr> <th>Time</th> <th>Room 1</th> <th>Room 2</th> <th>Room 3</th> <th>Room 4</th> <th>Room 5</th> </tr> <tr> <td class="rowHeader">08:30 am<br />
+            12:00 pm</td> <td>Beginning iOS Native Development - Part 1</td> <td>Beginning Native Android Development<br /> </td> <td>Responsive website development with HTML5</td> <td>Small Screen / Big Design, an Immediate Design Workshop</td> <td>Beginning Windows Phone Development</td> </tr> <tr> <td class="rowHeader special">12:00 pm<br />
+            01:30 pm</td> <td class="special" colspan="5">Lunch</td> </tr> <tr> <td class="rowHeader">01:30 pm<br />
+            05:00 pm</td> <td>Beginning iOS Native Development - Part 2</td> <td>Beginning Native Android Development - Part 2 </td> <td>Phonegap 101</td> <td>Windows Modern<br />
+            Mobile Design Workshop <br /> </td> <td>Beginning Windows 8 UI Development</td> </tr> <tr> <td class="rowHeader special">05:00 pm<br />
+            08:00 pm</td> <td class="special" colspan="5">Attendee Mixer and Party</td> </tr> </tbody> </table> <br /> <br />
+
+
+
+</div>
+
+
+
+
+<div class="ribbon"> <p>Day 2</p> </div>
+<table class="schedule">
+    <thead>
+        <tr>
+            <th>Time</th> 
+            
+                    <th>Mobile Design / UX</th>         
+                
+                    <th>Mobile Web</th>         
+                
+                    <th>Native iOS</th>         
+                
+                    <th>Native Android</th>         
+                
+                    <th>Windows Metro</th>         
+                
+                    <th>Marketing and Business</th>         
+                
+        </tr> 
+    </thead>
+    <tbody>
+        
+                <tr>
+                    <tr> <td class="rowHeader special">07:00 am<br />08:00 am</td><td class="special" colspan="6">Registration and Breakfast</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">08:00 am<br />09:00 am</td><td class="special" colspan="6">Keynote</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">09:00 am<br />09:15 am</td><td class="special" colspan="6">Break</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader">09:15 am<br>10:15 am</td><td><a href='#Situational_Opportunity.__Using_Human_Behavior_to_iInfluence_the_Design_and_Features_of_Mobile_Apps'>Situational Opportunity.  Using Human Behavior to iInfluence the Design and Features of Mobile Apps</a></td><td><a href='#Responsive_Design_is_Dead._Long_Live_Responsive_Design.'>Responsive Design is Dead. Long Live Responsive Design.</a></td><td><a href='#Populating_UITableViews_with_Your_New_RSS_Parser_Class'>Populating UITableViews with Your New RSS Parser Class</a></td><td><a href='#Getting_Started_with_Android_Library_Projects'>Getting Started with Android Library Projects</a></td><td><a href='#TBD'>TBD</a></td><td><a href='#Your_First_Enterprise_App_-_From_the_Trenches'>Your First Enterprise App - From the Trenches</a></td></tr> 
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">10:15 am<br />10:30 am</td><td class="special" colspan="6">Break</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader">10:30 am<br>11:30 am</td><td><a href='#Developers_are_from_Vulcan,_Designers_are_from_Wonderland'>Developers are from Vulcan, Designers are from Wonderland</a></td><td><a href='#Building_a_Windows_8_app_from_scratch'>Building a Windows 8 app from scratch</a></td><td><a href='#Keeping_Track_of_Moving_Things:_MapKit_and_CoreLocation_in_Depth'>Keeping Track of Moving Things: MapKit and CoreLocation in Depth</a></td><td><a href='#Connecting_to_the_Outside_World'>Connecting to the Outside World</a></td><td><a href='#Building_Apps_For_Windows_Phone_8'>Building Apps For Windows Phone 8</a></td><td><a href='#Defending_Mobile_Applications'>Defending Mobile Applications</a></td></tr> 
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">11:30 am<br />01:00 pm</td><td class="special" colspan="6">Lunch and Keynote</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">01:00 pm<br />01:15 pm</td><td class="special" colspan="6">Break</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader">01:15 pm<br>02:15 pm</td><td><a href='#Do's_and_Don'ts_of_Cross_Platform_Mobile_Design'>Do's and Don'ts of Cross Platform Mobile Design</a></td><td><a href='#Responsive_Web_Design:_From_Mobile_to_Desktop,_and_Beyond'>Responsive Web Design: From Mobile to Desktop, and Beyond</a></td><td><a href='#iOS_6:_Make_your_apps_cooler_with_small_changes!'>iOS 6: Make your apps cooler with small changes!</a></td><td><a href='#NFC_Application_Development_on_Android_4.x'>NFC Application Development on Android 4.x</a></td><td><a href='#Creating_Windows_8_RT_Casual_Games_for_Fun_and_Profit'>Creating Windows 8 RT Casual Games for Fun and Profit</a></td><td><a href='#Augmented_Reality_=_True_Mobile_Engagement'>Augmented Reality = True Mobile Engagement</a></td></tr> 
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">02:15 pm<br />02:30 pm</td><td class="special" colspan="6">Break</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader">02:30 pm<br>03:30 pm</td><td><a href='#Quick_&_Code-Free_Mobile_App_Prototyping_Techniques'>Quick & Code-Free Mobile App Prototyping Techniques</a></td><td><a href='#PhoneGap_Portability_Principles'>PhoneGap Portability Principles</a></td><td><a href='#CI_for_iOS:_Do_more_while_you_sleep'>CI for iOS: Do more while you sleep</a></td><td><a href='#Protecting_Your_Android_Source'>Protecting Your Android Source</a></td><td><a href='#M3Conf_Clash_of_the_Titans!'>M3Conf Clash of the Titans!</a></td><td><a href='#Preparing_for_Release_to_the_App_Store'>Preparing for Release to the App Store</a></td></tr> 
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">03:30 pm<br />03:45 pm</td><td class="special" colspan="6">Break</td></tr>
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader">03:45 pm<br>04:45 pm</td><td><a href='#No_one_reads_anything__-_Designing_for_users_on_the_move'>No one reads anything  - Designing for users on the move</a></td><td><a href='#Making_Responsive_Web_Application_using_ExpressJS,_Jade,_and_Stylus'>Making Responsive Web Application using ExpressJS, Jade, and Stylus</a></td><td><a href='#Debugging_with_Xcode'>Debugging with Xcode</a></td><td><a href='#Test_Driven_Android'>Test Driven Android</a></td><td><a href='#Windows_Azure_Mobile_Services:__The_Perfect_Partner'>Windows Azure Mobile Services:  The Perfect Partner</a></td><td><a href='#Do_I_Really_Need_a_Mobile_App,_or_is_a_Mobile-Friendly_Website_Enough'>Do I Really Need a Mobile App, or is a Mobile-Friendly Website Enough</a></td></tr> 
+                </tr>
+            
+                <tr>
+                    <tr> <td class="rowHeader special">04:45 pm<br />05:15 pm</td><td class="special" colspan="6">Closing Remarks and Prizes</td></tr>
+                </tr>
+            
+    </tbody> 
+</table>
+
+
+<div id="sessionsContent">
+    
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Augmented_Reality_=_True_Mobile_Engagement'></a>
+                            Augmented Reality = True Mobile Engagement
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#FrederickRyan'>Ryan Frederick</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Augmented reality is changing and evolving the way B2C and B2B companies engage with customers. By leveraging augmented reality, companies can engage customers in a unique and interactive experience. You will learn how augmented reality works, what the advantages are over other mobile engagement options, and you will see some examples of how it is being used.
+                    </div>
+                    <div class="sessionTrack">
+                        #Marketing and Business
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Building_a_Windows_8_app_from_scratch'></a>
+                            Building a Windows 8 app from scratch
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#FustinoRussell'>Russell Fustino</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        See how to build your first Windows 8 app. We will use what I learned when creating the app: .NET Gurus Can Cook, which contains recipes from famous folks in the software industry such as Scott Hanselman and Mary Jo Foley. Join ComponentOne Developer Evangelist and former Microsoft Developer Evangelist, Russ Fustino in this session and learn the new programming paradigm for creating Windows 8 style apps.  You will see how to build an application that incorporates many of the key characteristics of a great Windows 8 style app, including:
+&bull;	A modern UI user experience that leverages the signature Windows 8 controls such as GridView, ListView, FlipView, AppBar, Semantic Zoom and other Windows 8 controls.
+&bull;	A user experience that scales across large and small displays and provides proper handling of snapping and different orientations
+&bull;	Integration with Windows 8 charms through the settings, search, and share contracts
+&bull;	Handling of lifecycle and application-model events to properly save and restore state and roam settings so the users can seamless transition across tasks and even devices
+&bull;	Secondary tile pinning, notifications and badges to keep your application&rsquo;s content alive ever-present to the end-user
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Web
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Building_Apps_For_Windows_Phone_8'></a>
+                            Building Apps For Windows Phone 8
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#BlankenburgJeff'>Jeff Blankenburg</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        In this session, you'll get a technical look at many of the new features and technologies that are packed into the new Windows Phone 8 platform.
+                    </div>
+                    <div class="sessionTrack">
+                        #Windows Metro
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='CI_for_iOS:_Do_more_while_you_sleep'></a>
+                            CI for iOS: Do more while you sleep
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#MuncKevin'>Kevin Munc</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Continuous Integration (CI) can be a boost to your project. It can make your dev life easier. You may know this from having used a Continuous Integration server on Java, .NET or Ruby projects - it's pretty common, and for good reason. But CI for iOS is still too rare. This talk will discuss how to get started with CI for your iPhone and iPad projects. We'll cover compiling your code, running tests and deploying your app. We'll also survey other tools you can add to your CI environment to get more done while you sleep.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native iOS
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Connecting_to_the_Outside_World'></a>
+                            Connecting to the Outside World
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#NolanGodfrey'>Godfrey Nolan</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Because of Android's open nature, it makes it much easier for Android phone and tablets to connect to external devices via USB, Bluetooth and RS-232 serial interfaces. In this class, we show how to connect an Android tablet to different hardware, such as a barcode reader and a credit card reader via an Arduino board.
+We'll look at the tools and techniques you can employ to make connecting to external devices and what pitfalls you may encounter along the way. We'll also write an Android app to read the barcode information and display the data on an Android tablet.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native Android
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Creating_Windows_8_RT_Casual_Games_for_Fun_and_Profit'></a>
+                            Creating Windows 8 RT Casual Games for Fun and Profit
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#MairDoug'>Doug Mair</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Windows 8 brings a cool new platform for developing games and making some money.  This session will talk about the fundamentals of creating casual games and present the varied options that are now available on this platform.  We will also discuss how to make money from the games you have created.
+It has been an exciting ride creating Windows Phone 7 apps and the excitement continues with Windows 8 RT apps.
+                    </div>
+                    <div class="sessionTrack">
+                        #Windows Metro
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Debugging_with_Xcode'></a>
+                            Debugging with Xcode
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#KoziolDave'>Dave Koziol</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        This intermediate level session will help you get more out of debugging with Xcode.  It will start with the basics, like logging, breakpoints and variables, and move to more advanced topics like conditional breakpoints, watching memory and location debugging.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native iOS
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Defending_Mobile_Applications'></a>
+                            Defending Mobile Applications
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#BrennenJerod'>Jerod Brennen</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Smartphones and tablets continue to find their way into American homes and businesses, and every one of those devices is running multiple mobile applications. While this explosive growth has opened new worlds to end users, it has also garnered the attention of technically sophisticated criminals.
+This presentation is designed to provide mobile app developers with an understanding of mobile devices and applications from an attacker's perspective. Once that foundation has been laid, it goes on to equip developers with the knowledge and tools they need to build a secure application, one that functions as the developer intended and not as the attacker desires.
+                    </div>
+                    <div class="sessionTrack">
+                        #Marketing and Business
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Developers_are_from_Vulcan,_Designers_are_from_Wonderland'></a>
+                            Developers are from Vulcan, Designers are from Wonderland
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#FraserJennifer'>Jennifer Fraser</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        A lot of things need to happen to create a great product, including getting different types of people to learn to work together. How many times have you worked on something that never saw the light of day? Or looked a little different from what you expected when it launched? More often than not, this is due to a lack of shared goals and collaboration.
+Additionally, technology is advancing at the speed of light. We have the challenge of keeping up with these advances while also keeping our eye on the bigger picture -- the opportunity for our clients and customers. It's an exciting time where technology can deliver amazing, new experiences. But, this can only happen with a tight collaboration between everyone that is a part of the product creation process.
+Using examples from the colliding worlds of designers and developers trying to work together, we will look at some suggestions for how to improve collaboration, which, ultimately, creates better products.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Design / UX
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Do_I_Really_Need_a_Mobile_App,_or_is_a_Mobile-Friendly_Website_Enough'></a>
+                            Do I Really Need a Mobile App, or is a Mobile-Friendly Website Enough
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#McwherterJeff'>Jeff Mcwherter</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Mobile apps are the hottest trend in tech right now, leaving many companies struggling to create a mobile strategy for their products or services. When defining this strategy, the question of do I really need a mobile app is the first barrier that needs to be crossed. Deciding whether a mobile app is truly necessary is the first, and perhaps the most important decision. In this session, I will discuss why a company might truly need a custom mobile application, and when updating a portion of an existing web site to be mobile device-friendly may be the more appropriate solution.
+                    </div>
+                    <div class="sessionTrack">
+                        #Marketing and Business
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Do's_and_Don'ts_of_Cross_Platform_Mobile_Design'></a>
+                            Do's and Don'ts of Cross Platform Mobile Design
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#FerrellJustin'>Justin Ferrell</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        With so many tools available today to make applications run across multiple platforms, it's easy to think that a user experience can translate well to all platforms. The fact of the matter is, users on different platforms have different expectations. What works on Android might not work on iOS, and what works on iOS probably won't transfer well to Windows Phone 7. Apps should make use of features and UI elements specific to their platform, and make the user feel right at home on every possible device. Together, we can examine the design metaphors of each platform and determine the best way to provide a consistent and elegant user experience.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Design / UX
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Getting_Started_with_Android_Library_Projects'></a>
+                            Getting Started with Android Library Projects
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#McwherterJeff'>Jeff Mcwherter</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        As a great software developer, you learned early in your development career that duplication of code was not a good idea. With development patterns such as SOLID, developers are trained early that code duplication is evil.
+To help battle code duplication, and allow parts of Android applications to be reusable, the Android platform has recently introduced library projects to add to your development arsenal. In this session, we will explore Android library projects and the benefit they can provide to your application.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native Android
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='iOS_6:_Make_your_apps_cooler_with_small_changes!'></a>
+                            iOS 6: Make your apps cooler with small changes!
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#TiwariAshutosh'>Ashutosh Tiwari</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Recently iOS 6 has been all the rage in mobile circles, and we even got a glimpse of it in action in June at WWDC 2012. But what it really offers and how to make the best use of new features in an efficient manner is what matters to developers. In this talk we will learn how to make our apps more interactive with the use of iOS6 and third party libraries.  Along the way we will discover techniques to make apps even more engaging and cool. By looking at App Store stats one can easily tell what makes a good app; it is not just &ldquo;What it can do&rdquo; but &ldquo;How you achieve that goal&rdquo; without making your app boring or dull. Learn how to make your own design guidelines to better serve your users and step outside of basic interactions.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native iOS
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Keeping_Track_of_Moving_Things:_MapKit_and_CoreLocation_in_Depth'></a>
+                            Keeping Track of Moving Things: MapKit and CoreLocation in Depth
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#GoetzGeoffrey'>Geoffrey Goetz</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Adding a Map to an App and recording a User&rsquo;s location as they use the App has become a common must have feature in may of todays popular applications. This presentation will go over the APIs for accomplishing such tasks including map annotations, dragging and dropping custom pins as well as delve into some of the finer aspects of the required location based calculations one needs to consider to find the center of the map or the distance between two points. Additionally the presentation will go over techniques to update a MapView with a moving object as well as positioning the image for the object properly along its heading. This will be a straight forward hands on development presentation with plenty of code examples.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native iOS
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='M3Conf_Clash_of_the_Titans!'></a>
+                            M3Conf Clash of the Titans!
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#BasuSamidip'>Samidip Basu</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        This is the M3Conf Panel you've been waiting on! We bring together three awesome experts from iOS, Windows Phone &amp; Android and let them fight it out! Come learn about what's next on the horizon for all three platform &amp; how they measure up to each other. Interactive audience participation expected during panel discussion!
+Panelists:
+Jeff Blankenburg - Windows Phone
+Leon Gersing - iOS
+Ben Von Handorf - Android
+Samidip Basu - Anchor
+                    </div>
+                    <div class="sessionTrack">
+                        #Windows Metro
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Making_Responsive_Web_Application_using_ExpressJS,_Jade,_and_Stylus'></a>
+                            Making Responsive Web Application using ExpressJS, Jade, and Stylus
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#GleasonJackie'>Jackie Gleason</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        This session will go over a simple tutorial on how to make simple, responsive web applications using Node.JS frameworks. The main focus will be on developing web applications (and native since node runs on ARM) for mobile and tablet devices. Some of the frameworks used will be ExpressJS, Stylus, Jade, MongoDB, and Nock. Come join us and see how simple opensource cross-device application development can be!
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Web
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='NFC_Application_Development_on_Android_4.x'></a>
+                            NFC Application Development on Android 4.x
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#BawaHarimohan'>Harimohan Bawa</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Near Field Communication (NFC) is a set of short-range wireless technologies, typically requiring a distance of 4cm or less to initiate a connection. NFC allows you to share small payloads of data between an NFC tag and an Android-powered device, or between two Android-powered devices. NFC technology  could also be used to bootstrap more capable wireless connections like Bluetooth.
+NFC has various uses in industries like Banking and Finance, Security, Transpiration, Commerce, Entertainment etc.
+This session will cover getting started with NFC application development using Android 4.x NFC API's and NFC application demo.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native Android
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='No_one_reads_anything__-_Designing_for_users_on_the_move'></a>
+                            No one reads anything  - Designing for users on the move
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#CapuanaNicole '>Nicole  Capuana</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Good UX is simple, clean and makes users&rsquo; lives easier.
+As a designer, if I do my job right, people don&rsquo;t notice. But making design simple and effective requires effort. I&rsquo;ll talk about how to:
+1. Start with interface guidelines
+2. Look for design patterns
+3. Take away and strengthen
+4. Test with users
+5. Iterate
+Reviewing stories from the trenches, I&rsquo;ll give you insight into making simple, effective apps that users love. Whether you&rsquo;re the lone UX person on your project or you&rsquo;re on a UX team, you&rsquo;ll come away with concrete ideas and inspiration to make your next app shine.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Design / UX
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='PhoneGap_Portability_Principles'></a>
+                            PhoneGap Portability Principles
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#ShultzDan'>Dan Shultz</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        So you've used HTML5 + Responsive Design to create a flexible mobile application. PhoneGap 2.0 and PhoneGap Build allow you to easily wrap and deploy your app to common mobile devices. We'll look at some PhoneGap basics and then step through typical development and deployment processes, with an eye on developing a single codebase that is as portable as possible.
+With a well-designed HTML codebase, PhoneGap allows you to easily reuse the same code for Android, iPhone, iPad, iPod Touch and Android tablet devices, which makes it an incredibly powerful tool. We'll examine the common capabilities of these devices, and techniques to ensure that our code is 100% reusable, and also look at some other not-so-common devices and outlets that you may have overlooked.
+We'll get an overview of the new Chrome Web Store, among other destinations, and consider the additional effort involved in targeting them, as well as the things you'll want to think about up front. It'll be a fun 50 minutes, and you might even discover a new destination for your existing app.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Web
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Populating_UITableViews_with_Your_New_RSS_Parser_Class'></a>
+                            Populating UITableViews with Your New RSS Parser Class
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#MillerDon'>Don Miller</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        You don't need to be an expert to create an iOS app from a RSS feed.  Our journey will begin by creating a RSS parser class and NSLogging output to test it out.  Once that milestone is complete, we will then use that class to create an iPhone app to display the top 100 movies from Netflix.  Work along and/or use github for the code later.  We will use a storyboard and the Master-Detail template to build the app.  If time permits, we can explore building the same app with xib files.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native iOS
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Preparing_for_Release_to_the_App_Store'></a>
+                            Preparing for Release to the App Store
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#GoetzGeoffrey'>Geoffrey Goetz</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        This presentation will take on the perspective of the independent developer and what needs to be considered prior to releasing an App onto Apple&rsquo;s App Store. While the information shared will be useful to larger companies and corporations, the assumed actor will be an individual one person does it all perspective (as larger companies would need to involve communications, marketing and legal representation for many of the steps to a successful launch). The presentation will include such topics as setting up a relationship with Apple, preparing for a web presence, and how to handle user feedback and suggestions. It will also go into device provisioning, pricing, and the use of promo codes when getting people to use your App for the first time.
+                    </div>
+                    <div class="sessionTrack">
+                        #Marketing and Business
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Protecting_Your_Android_Source'></a>
+                            Protecting Your Android Source
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#NolanGodfrey'>Godfrey Nolan</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Due to the design of the Java Virtual Machine or JVM it is relatively trivial to reverse engineer Java code from Java jar and class files.  While this hasn't been an issue in the past since most Java files are hidden on the server, it is an issue on Android phones where the client side Android apk files are easily obtained and just as easy to decompile back into source.
+In this session Godfrey Nolan, author of Decompiling Java, and the soon to be published Decompiling Android will explain how and why this is possible by unraveling the apk into dex files and the tools that are currently available to decompile your apk's back into Java or Javascript source code with the right click of a mouse.  We'll show some of the security issues that this raises, such as inadvertently allowing people gain access to credit card information or backend systems, when someone has complete access to your source. We'll also look at open source and commercial obfuscation tools and other techniques you should be using, such as C++ coding, watermarking etc. to stop people gaining access to your Android code.  While we don't expect any previous knowledge of decompilation or obfuscation techniques before the session, we can promise that at the end of session you will be armed with enough information to safeguard your intellectual property from what is a very significant but little understood issue.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native Android
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Quick_&_Code-Free_Mobile_App_Prototyping_Techniques'></a>
+                            Quick & Code-Free Mobile App Prototyping Techniques
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#KiekbuschScott'>Scott Kiekbusch</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        As mobile applications and interactions become more complex, designers need tools to validate their designs, facilitate usability tests, and communicate complex interactions to business owners and development partners.
+From hand-drawn sketches and paper stencils, to fully interactive UIs, Scott will cover various mobile prototyping techniques to meet a variety of the most common use cases mobile designers encounter. Session attendees will learn about a number of prototyping tools (including Keynotopia and Proto.io), and discuss which tools to use when.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Design / UX
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Responsive_Design_is_Dead._Long_Live_Responsive_Design.'></a>
+                            Responsive Design is Dead. Long Live Responsive Design.
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#KarrJay'>Jay Karr</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        RWD: Experience vs. Resolution.  Why Resolution isn't enough.
+The Resource tech and creative team of Jay Karr and Todd Yuzwa will talk about what's beyond Responsive Web Design (RWD), one of the hottest topics in the design and tech communities right now.  Is RWD a passing fad or a true web revolution of transcending fixed canvas design?
+The reality is that your visitors don't care if an experience is responsive.  They care if it's easy to use, fast and relevant.  We will will demonstrate why resolution independence isn't enough, and show how we can deliver better, smarter web and mobile experiences now.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Web
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Responsive_Web_Design:_From_Mobile_to_Desktop,_and_Beyond'></a>
+                            Responsive Web Design: From Mobile to Desktop, and Beyond
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#Marschall-MillerAmelia'>Amelia Marschall-Miller</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        As mobile device usage continues to expand, the variety of screen sizes, resolutions, and capabilities of mobile phones and tablets is becoming more and more diverse. It's possible, and important, to ensure your site provides an optimal experience for whatever device your audience is using. Responsive web design allows your site to seamlessly adjust and fit the screen its viewed on, and can easily be implemented in most major CMS systems. Learn how to design and plan your responsive site, develop your layouts with a fluid grid, and test to ensure your site looks great on tons of devices!
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Web
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Situational_Opportunity.__Using_Human_Behavior_to_iInfluence_the_Design_and_Features_of_Mobile_Apps'></a>
+                            Situational Opportunity.  Using Human Behavior to iInfluence the Design and Features of Mobile Apps
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#HeatonAndrew'>Andrew Heaton</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        In this session, Andrew Heaton, author of Purposely Irregular and Chief Chemist of Experience at Brilliant Chemistry will discuss how expected human behavior can be used to determine direction, create features and influence the design of a mobile app.  He will describe Situational Opportunity: the reason users reach for a mobile device and the factors that cause them to consider an app for its intended purpose.  Heaton will illustrate practical uses for this technique on new and existing apps and how it can be used as part of the development process.  This session is intended for designers of any level.
+                    </div>
+                    <div class="sessionTrack">
+                        #Mobile Design / UX
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Test_Driven_Android'></a>
+                            Test Driven Android
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#Morgan & WilsonJeff "Cheezy" & Levi'>Jeff "Cheezy" & Levi Morgan & Wilson</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        It can't be done!  Android is a unique environment and there is no way to test drive it.  This view is all too prevalent in the Android community. Join Cheezy and Levi as they dispel this myth.  Watch this live coding presentation in which the dynamic duo test drives and Android application before your eyes.  Watch as Cheezy keeps an outer loop of acceptance tests going to inform Levi to build the inner loop of unit tests that drive out the implementation.
+Besides, it's live coding folks - what could possibly go wrong?  This is one presentation you won't want to miss.
+                    </div>
+                    <div class="sessionTrack">
+                        #Native Android
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Windows_Azure_Mobile_Services:__The_Perfect_Partner'></a>
+                            Windows Azure Mobile Services:  The Perfect Partner
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#CollierMichael'>Michael Collier</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        Building a robust, modern mobile application often requires a developer to not only focus on the front end user experience, but also backend services such as data storage, user authentication, and often push notification services.  This is often the tedious, less enjoyable aspect of building an application for many mobile application developers.  Windows Azure Mobile Services provides a scalable and easy-to-use &ldquo;backend-as-a-service&rdquo; for mobile applications.  In this session we&rsquo;ll use Windows Azure Mobile Services to power a new Windows 8 application.  We&rsquo;ll see how in just a few minutes we can have a ready-to-go application and service that provides scalable data storage, user authentication, and push notification support.
+                    </div>
+                    <div class="sessionTrack">
+                        #Windows Metro
+                    </div>
+                </div>
+            </div>
+        
+            <div class="session">
+                <div class="sessionHeader">
+                    <h3 class="sessionTitle">
+                        <span>
+                            <a id='Your_First_Enterprise_App_-_From_the_Trenches'></a>
+                            Your First Enterprise App - From the Trenches
+                        </span>
+                    </h3>
+                </div>
+                <div class="sessionContent">
+                    <div class="sessionSpeaker">
+                        <a href='/home/speakers#WattsNick'>Nick Watts</a>
+                    </div>
+                    <div class="sessionAbstract">
+                        You've probably been to many mobile coference sessions on topics like coding on a popular mobile platform, creating the right user experience and mobile design that have both excited and enticed. But, if you're like me, your first enthralling foray into building a mobile app for an enterprise was or will be a sobering experience. There's a whole lot more to any enterprise app than just design and programming.
+Any complexity in the app itself pales in comparison to collaborating with vendors and integrating the app into your existing systems. This talk will draw on my intimate experience with building my company's first mobile app to help attendees who are poised to build their company's first app. I will survey the true amount of work that can go into building an app that exposes company data. I'll also openly layout concerns about collaborating both with internal teams and external consultants and vendors as well as issues related to integrating multiple in-house and third-party systems into a multi-platform, customer-facing app.
+                    </div>
+                    <div class="sessionTrack">
+                        #Marketing and Business
+                    </div>
+                </div>
+            </div>
+        
+</div>
+					</div>
+				</div>
+				<div id="containerAuxiliaryNav">
+					
+<div id="phAuxiliaryNav_T154BDFEA011">
+	
+            <div id="ctl00_phAuxiliaryNav_T154BDFEA011_ctl00_ctl00_siteMapControl_customnavigation" class="RadSiteMap RadSiteMap_Sitefinity">
+		<ul class="rsmList rsmLevel rsmOneLevel">
+			<li class="rsmItem"><a class="rsmLink" href="../auxiliary/pressroom">Pressroom</a></li><li class="rsmItem"><a class="rsmLink" href="../auxiliary/gallery">Gallery</a></li><li class="rsmItem"><a class="rsmLink" href="../auxiliary/sitemap">Sitemap</a></li>
+		</ul><input id="ctl00_phAuxiliaryNav_T154BDFEA011_ctl00_ctl00_siteMapControl_customnavigation_ClientState" name="ctl00_phAuxiliaryNav_T154BDFEA011_ctl00_ctl00_siteMapControl_customnavigation_ClientState" type="hidden" />
+	</div>
+        
+<script type="text/javascript">
+    
+
+    function radMenuOnClick(sender, args) {
+
+        var state = args.get_item().get_attributes().getAttribute("ExpandOnClick");
+        args.get_item().get_attributes().setAttribute("ExpandOnClick", "true")
+        args.get_item().open();
+    }
+
+    function radMenuOnOpening(sender, args) {
+        var state = args.get_item().get_attributes().getAttribute("ExpandOnClick");
+        if(state != "true")
+            args.set_cancel(true);
+        args.get_item().get_attributes().setAttribute("ExpandOnClick", "false")
+    }
+</script>
+
+</div>
+				</div>
+				<div id="containerFooter">
+					<div class="leftColumn">
+						
+<div class="sfContentBlock">
+	<p>&copy; Copyright 2012 | M<sup>3</sup> Conference, Inc.</p>
+
+
+
+</div>
+					</div>
+					<div class="middleColumn">
+						
+<div class="sfContentBlock">
+	<p>Site by <a href="http://finecitizens.com" target="_blank">Fine Citizens</a></p>
+
+
+
+</div>
+					</div>
+					<div class="rightColumn">
+						
+<div class="sfContentBlock">
+	<a href="http://www.facebook.com/M3Conf" target="_blank"><img src="/images/social-media/facebook.png?sfvrsn=2" alt="Like us on Facebook" title="Like us on Facebook" /></a> <a href="http://twitter.com/#!/@M3conf" target="_blank"><img src="/images/social-media/twitter.png?sfvrsn=2" alt="Follow us on Twitter" title="Follow us on Twitter" /></a> <a href="http://www.linkedin.com/groups/M3-Conference-4114113" target="_blank"><img src="/images/social-media/linkedin.png?sfvrsn=2" alt="Connect with us on LinkedIn" title="Connect with us on LinkedIn" /></a>
+
+
+
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl05_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en:10f0c383-ac8b-4840-af99-28b79d3cbef1:8cee9284:580b2269;Telerik.Web.UI.Skins, Version=2012.1.215.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en:b77c524c-50b0-446e-81f3-483d69ea19db:7a57e389:6c8ef648';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":2,"_skin":"Sitefinity","clientStateFieldID":"ctl00_mainNav_T154BDFEA010_ctl00_ctl00_siteMapControl_horizontalsimple_ClientState","selectedIndexes":["2"],"tabData":[{"value":"About"},{"value":"Venue"},{"value":"Schedule"},{"value":"Speakers"},{"value":"Sponsorship"},{"value":"Follow"},{"value":"Register"}]}, null, null, $get("ctl00_mainNav_T154BDFEA010_ctl00_ctl00_siteMapControl_horizontalsimple"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadSiteMap, null, null, null, $get("ctl00_phAuxiliaryNav_T154BDFEA011_ctl00_ctl00_siteMapControl_customnavigation"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
