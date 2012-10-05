@@ -6,7 +6,6 @@
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
-var jsdom = require("jsdom");
 //var $ = require('jquery'),
 var http = require('http'),
     querystring = require('querystring'),
