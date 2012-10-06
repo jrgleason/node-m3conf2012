@@ -1,16 +1,18 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    block head
+      title= title
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      link(rel='stylesheet', href='/stylesheets/mobile.css')
   body
     #wrapper
-      block header
+      block left
         #header
           h1 
             a(href="#") 
               span M3Conf Schedulr
-      #content
+      block middle 
         #nav
           #menu
             ul
@@ -18,5 +20,6 @@ html
                 a(href="#") Home
           #submenu
             ul
-              li Test1
-        block content
+              li 
+                a(href="#") Test1
+     
