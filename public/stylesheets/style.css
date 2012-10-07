@@ -53,6 +53,7 @@ a {
   color: #003;
 }
 #nav li {
+  float: left;
   list-style: none;
   padding: 6px 0;
 }

@@ -8,19 +8,31 @@ html
       link(rel='stylesheet', href='/stylesheets/mobile.css')
   body
     #wrapper
-      block left
+      block leftheader
         #header
           h1 
-            a(href="#") 
+            a(href="/") 
               span M3Conf Schedulr
-      block middle 
-        #nav
-          #menu
-            ul
-              li
-                a(href="#") Home
-          #submenu
-            ul
-              li 
-                a(href="#") Test1
-     
+      #nav
+        #menu
+          ul
+            li
+              a(href="/") Home
+            li
+              a(href="/class/add") Add Class
+        #submenu
+          ul
+            li 
+              a(href="#") Test1
+      #content
+        #leftbar
+          block left
+        #middlebar
+          block middle
+        #rightbar
+          block right
+            h1 ads here
+            a(href="http://www.m3conf.com")
+              img(src="/images/M3ad.png")
+        
+           

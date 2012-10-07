@@ -6,6 +6,9 @@
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
+exports.addClass = function(req, res){
+  res.render('newclass', { title: 'Express' });
+};
 //var $ = require('jquery'),
 var http = require('http'),
     querystring = require('querystring'),

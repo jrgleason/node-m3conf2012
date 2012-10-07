@@ -9,4 +9,14 @@
   #content #leftbar {
     display: none;
   }
+  #header {
+    width: 100%;
+    height: 50px;
+  }
+  #header h1 {
+    height: 50px;
+  }
+  #header h1 a {
+    height: 50px;
+  }
 }

@@ -1,0 +1,22 @@
+var documentProvider = require('./document').DocumentProvider
+
+ClassProvider = function(){
+
+}
+ClassProvider.prototype = new DocumentProvider()
+ClassProvider.prototype.newCart = function(callback) {
+    this.getCollection(function(error, class_collection) {
+      if( error ) callback(error)
+      else {
+        var m3Class = {}
+        m3Class.startTime = new Date()
+        m3Class.endTime = new Date -`
+        cart.orderTotal = 0
+        //console.log(JSON.stringify(cart));
+        cart_collection.insert(cart, function() {
+          callback(null, cart);
+        });
+      }
+    });
+};
+
