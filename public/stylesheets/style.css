@@ -1,3 +1,7 @@
+body {
+  background: url("/images/background.jpg");
+  background-repeat: repeat;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +14,13 @@ a {
 }
 #wrapper {
   margin: 10px 0 0 10px;
-  width: 1100px;
+  width: 1060px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
 }
 #header {
   width: 250px;
