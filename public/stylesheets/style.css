@@ -85,5 +85,19 @@ a {
   display: block;
 }
 #content {
+  float: none;
+  clear: both;
+}
+#content #leftbar {
   float: left;
+  width: 250px;
+  margin-right: 10px;
+}
+#content #middlebar {
+  float: left;
+  width: 600px;
+}
+#content #rightbar {
+  float: left;
+  width: 200px;
 }
