@@ -42,9 +42,9 @@ var checkSiteCallback = function(res) {
         res.body += chunk;
       });
       res.on('end', function() {
-        console.log(JSON.stringify(res.body))
+        //console.log(JSON.stringify(res.body))
         var parser = new htmlparser.Parser(checkSiteHtmlParserHandler);
-        //parser.parseComplete(res.body); 
+        parser.parseComplete(res.body); 
         return curNext();
       });
 };
@@ -86,7 +86,7 @@ var extractScheduleHeaders = function(dom, callback){
             if( brMatches == undefined){
               var value = JSON.stringify(child.raw).replace(/\\n[ ]+/g, '').replace(/\"/g,''); 
               if(isStartDate){
-                time = {"startTime":value};
+                time.startTime = value;
                 isStartDate = false;
               }
               else{
@@ -97,42 +97,34 @@ var extractScheduleHeaders = function(dom, callback){
             } 
           }
         }
-      }
-      else{
-        for (var ci in tuple.children){
-          var text;
-          var children = tuple.children[ci]
-          for (var gci in children)
-          {
-            console.log(JSON.stringify(children.children[gci]))  
+        //TODO: extract out to method
+        else{
+          if(tuple.children[0].raw != "Break"){
+            time.classes.push({className:tuple.children[0].raw});
+            console.log(JSON.stringify(tuple.children[0].raw));
           }
         }
       }
+
+      else{
+        if(tuple.children[0].raw != "Break"){
+          if(tuple.children[0].name = "a"){
+            var ahreftxt = tuple.children[0].children
+            for (var childi in ahreftxt){
+              time.classes.push({
+                className:ahreftxt[childi].data
+              })
+            }
+          }
+          else{
+            time.classes.push({
+              className:tuple.children[0].data
+            });
+          }
+        }
+      }
+      
     }
   }
-  //var scheduleHeaders = htmlparser.DomUtils.getElements({class:"rowHeader"},schedule);
-  //var headerTimes = []
-//  for (var i in scheduleHeaders){
- //   var val = scheduleHeaders[i];
-   // var isStartDate = true;
- //   var time;
-  //  for (var childi in val.children){
- //     var child = val.children[childi];
- //     var brMatches = child.raw.match(/[Bb][Rr]/g)
- //     if( brMatches == undefined){
- //       //console.log(JSON.stringify(child.raw).replace(/\\n[ ]+/g, ''))
- //       var value = JSON.stringify(child.raw).replace(/\\n[ ]+/g, '').replace(/\"/g,''); 
- //       if(isStartDate){
- //         time = {"startTime":value};
- //         isStartDate = false;
- //       }
- //       else{
- //         time.endTime = value;
- //         headerTimes.push(time);
- //         isStartDate = true;
- //       }
- //     }
- //   }
- // }
   callback(timeframe);
 };
