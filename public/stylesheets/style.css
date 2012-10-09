@@ -23,17 +23,21 @@ a {
   box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
 }
 #header {
-  width: 250px;
+  width: 240px;
+  height: 149px;
   position: relative;
   float: left;
   margin-right: 10px;
+  margin-left: 10px;
   clear: both;
   z-index: 6;
 }
+#header #mobileMenu {
+  display: none;
+}
 #header h1 {
   height: 148px;
-  border: 1px solid #066;
-  border-width: 1px 0;
+  border-bottom: 1px solid #066;
   position: relative;
   font-size: 24px;
 }
@@ -51,21 +55,26 @@ a {
   text-decoration: none;
 }
 #nav {
-  border-top: 1px solid #066;
   border-bottom: 1px solid #aaa;
-  height: 70px;
+  height: 149px;
   padding: 0;
   margin: 0;
   float: left;
-  width: 800px;
+  width: 790px;
+  margin-right: 10px;
   color: #003;
+  border-bottom: 1px solid #066;
 }
-#nav li {
+#nav #menu {
+  border-bottom: 1px solid #066;
+  height: 70px;
+}
+#nav #menu li {
   float: left;
   list-style: none;
   padding: 6px 0;
 }
-#nav li a {
+#nav #menu li a {
   border-right: 1px solid #ddd;
   padding: 0 0 6px 4px;
   height: 47px;
@@ -73,22 +82,20 @@ a {
   color: #003;
   display: block;
 }
-#submenu {
-  border-top: 1px solid #066;
-  border-bottom: 1px solid #066;
-  height: 80px;
+#nav #submenu {
+  height: 70px;
   padding: 0;
   margin: 0;
   float: left;
-  width: 800px;
+  width: 790px;
+  margin-right: 10px;
   color: #003;
 }
-#submenu li {
+#nav #submenu li {
   list-style: none;
   padding: 6px 0;
 }
-#submenu li a {
-  border-right: 1px solid #ddd;
+#nav #submenu li a {
   padding: 0 0 6px 4px;
   height: 47px;
   width: 85px;

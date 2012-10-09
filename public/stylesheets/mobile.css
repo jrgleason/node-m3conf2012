@@ -1,7 +1,9 @@
 @media screen and (max-width:480px) {
-  div {
-    float: none;
-    clear: both;
+  #wrapper {
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 450px;
   }
   #nav {
     display: none;
@@ -10,13 +12,33 @@
     display: none;
   }
   #header {
-    width: 100%;
+    width: 430px;
+    height: 50px;
+    border-bottom: 1px solid #000;
+  }
+  #header #logo {
+    float: left;
+    width: 300px;
+  }
+  #header #logo h1 {
+    border: 0 solid #000;
     height: 50px;
   }
-  #header h1 {
+  #header #logo h1 a {
     height: 50px;
   }
-  #header h1 a {
-    height: 50px;
+  #header #mobileMenu {
+    float: right;
+    margin-right: 15px;
+    margin-top: 5px;
+    color: #fff;
+    width: 80px;
+    padding: 5px;
+    height: 25px;
+    background-color: #808080;
+    display: inline;
+  }
+  #header #mobileMenu p {
+    text-align: center;
   }
 }
