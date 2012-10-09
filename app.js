@@ -25,7 +25,10 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({
+    dumpExceptions: true,
+    showStack: true
+  }));
 });
 
 app.get('/',routes.checkSite,routes.index);
