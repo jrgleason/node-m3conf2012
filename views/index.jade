@@ -3,3 +3,13 @@ extends layout
 block append middle
   h1= title
   p Welcome to #{title}
+  #classes
+    ul
+      - each time in schedule
+        li
+          h1 #{time.startTime} to #{time.endTime}
+            ul
+              - each m3class in time.classes
+                li
+                  p #{m3class.className}
+      

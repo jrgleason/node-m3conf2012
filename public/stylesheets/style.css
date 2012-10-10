@@ -103,6 +103,7 @@ a {
   display: block;
 }
 #content {
+  overflow: scroll;
   float: none;
   clear: both;
   min-height: 1000px;

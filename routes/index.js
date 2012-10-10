@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express', schedule: req.schedule });
 };
 exports.addClass = function(req, res){
   res.render('newclass', { title: 'Express' });
@@ -24,7 +24,27 @@ exports.checkSite = function(req, res, next){
       path: '/home/schedule',
       method: 'GET',
   };
-  var post_req = http.request(post_options, checkSiteCallback);
+  var post_req = http.request(post_options, 
+    function(res) {
+      res.setEncoding('utf8');
+      res.body = '';
+      res.on('data', function (chunk) {
+        res.body += chunk;
+      });
+      res.on('end', function() {
+        var parser = new htmlparser.Parser(checkSiteHtmlParserHandler);
+        parser.parseComplete(res.body); 
+        if(checkSiteHtmlParserHandler.error == undefined)
+          console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
+        else{
+          extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(headerTimes){
+            console.log(JSON.stringify(headerTimes))
+            req.schedule = headerTimes
+          });
+        }
+        return next();
+      });
+    });
   post_req.write("")
   post_req.end()
   req.on('error', function(e) {
@@ -35,36 +55,20 @@ exports.checkSite = function(req, res, next){
 };
 
 
-var checkSiteCallback = function(res) {
-      res.setEncoding('utf8');
-      res.body = '';
-      res.on('data', function (chunk) {
-        res.body += chunk;
-      });
-      res.on('end', function() {
-        //console.log(JSON.stringify(res.body))
-        var parser = new htmlparser.Parser(checkSiteHtmlParserHandler);
-        parser.parseComplete(res.body); 
-        return curNext();
-      });
-};
-
 
 var checkSiteHtmlParserHandler = new htmlparser.DefaultHandler(function(error, dom)
 {
+  var result;
   if(error)
     console.log("There was an error")
   else{
-    //console.log(JSON.stringify(dom)) 
     extractScheduleHeaders(dom, function(headerTimes){
-      for (var i in headerTimes){
-        console.log(JSON.stringify(headerTimes[i]));
-      }
+      result = headerTimes
     });
   } 
 });
 
-var extractScheduleHeaders = function(dom, callback){
+var extractScheduleHeaders = function(dom,  callback){
   var schedule = htmlparser.DomUtils.getElements({class:"schedule"}, dom);
   var scheduleRows = htmlparser.DomUtils.getElements({tag_name:"tr"}, schedule)
   var timeframe = []
@@ -101,7 +105,6 @@ var extractScheduleHeaders = function(dom, callback){
         else{
           if(tuple.children[0].raw != "Break"){
             time.classes.push({className:tuple.children[0].raw});
-            console.log(JSON.stringify(tuple.children[0].raw));
           }
         }
       }
