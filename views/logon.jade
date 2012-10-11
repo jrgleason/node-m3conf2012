@@ -1,0 +1,12 @@
+#logon
+  //img#logo(src="/images/logov2sm.png",style="float:left;")
+  if userinfo == null 
+    .signIn
+      a(href="/auth/google") Sign in with Google
+  else
+     .message
+       h4 Welcome #{userinfo.name}
+     .logout
+       a(href="/logout") Logout
+
+

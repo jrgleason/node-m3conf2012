@@ -1,0 +1,12 @@
+#times
+   ul
+     - each time in schedule
+       .time
+         li
+           h1 #{time.startTime} to #{time.endTime}
+             .classes
+               ul
+                 - each m3class in time.classes
+                   .class
+                     li
+                       a(href="#") #{m3class.className}

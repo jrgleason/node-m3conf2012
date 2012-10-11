@@ -4,7 +4,12 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express', schedule: req.schedule });
+  res.render('index', 
+    { 
+      title: 'Express', 
+      schedule: req.schedule, 
+      userinfo: req.userinfo 
+    });
 };
 exports.addClass = function(req, res){
   res.render('newclass', { title: 'Express' });

@@ -13,7 +13,9 @@ a {
   color: #00b7ff;
 }
 #wrapper {
-  margin: 10px 0 0 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
   width: 1060px;
   margin-right: auto;
   margin-left: auto;
@@ -103,7 +105,7 @@ a {
   display: block;
 }
 #content {
-  overflow: scroll;
+  overflow: hidden;
   float: none;
   clear: both;
   min-height: 1000px;
@@ -134,4 +136,13 @@ a {
   padding-top: 10px;
   padding-left: 10px;
   height: 100%;
+}
+#times .time {
+  border: 1px solid #000;
+}
+#times .time li {
+  list-style: none;
+}
+#times .time .classes .class {
+  margin-left: 10px;
 }

@@ -7,7 +7,18 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , google = require('./lib/google/interface')
+  , GOOGLE_CLIENT_ID = "845535169674-4d2cuan06ueva581lk9c2r3osk4jeeca.apps.googleusercontent.com"
+  , GOOGLE_CLIENT_SECRET = "nFCjakDdu4-f1QbrWwDVyjeA"
+  , REDIRECT_URL_DOMAIN = process.env.OPENSHIFT_APP_DNS || 'localhost:3000'
+  , REDIRECT_URL_PATH = '/auth/google/getToken'
+  , REDIRECT_URL = 'http://'+REDIRECT_URL_DOMAIN+REDIRECT_URL_PATH
+
+google.setClientId(GOOGLE_CLIENT_ID)
+google.setClientSecret(GOOGLE_CLIENT_SECRET)
+
+
 
 var app = express();
 
@@ -34,6 +45,10 @@ app.configure('development', function(){
 app.get('/',routes.checkSite,routes.index);
 app.get('/users', user.list);
 app.get('/class/add', routes.addClass)
+app.get('/auth/google', google.requestCode) 
+app.get('/auth/google/getToken' 
+        , google.callbackHandler 
+        , google.getUserInformation)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
