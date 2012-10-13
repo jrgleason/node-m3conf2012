@@ -5,7 +5,24 @@ block append left
 block append middle
   div#tmpId
     if userinfo == null
-      h1 Please Sign in to Create Schedule!
+      h1 Please 
+         a(href="/auth/google") Sign in 
+         to Create Schedule!
     else
-      h1 Feel Free to Schedule!
+      h1
+        a(href="/logout") Logout
+        span  - 
+        Feel Free to Schedule!
 
+
+if userinfo == null
+  #logon
+    .signIn
+      a(href="/auth/google") Sign in with Google
+
+else
+  #logon
+    .message
+      h4 Welcome #{userinfo.name}
+    .logout
+      a(href="/logout") Logout
