@@ -2,8 +2,10 @@ extends layout
 
 block append left
   include time
-
 block append middle
   div#tmpId
-    h1 Please Sign in to Create Schedule!
-      
+    if userinfo == null
+      h1 Please Sign in to Create Schedule!
+    else
+      h1 Feel Free to Schedule!
+

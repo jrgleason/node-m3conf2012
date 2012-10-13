@@ -4,11 +4,12 @@
  */
 
 exports.index = function(req, res){
+  //console.log(req.session.user.name)
   res.render('index', 
     { 
       title: 'Express', 
       schedule: req.schedule, 
-      userinfo: req.userinfo 
+      userinfo: req.session.user 
     });
 };
 exports.addClass = function(req, res){
@@ -35,7 +36,7 @@ exports.checkSite = function(req, res, next){
       res.body = '';
       res.on('data', function (chunk) {
         res.body += chunk;
-      });
+      })
       res.on('end', function() {
         var parser = new htmlparser.Parser(checkSiteHtmlParserHandler);
         parser.parseComplete(res.body); 
@@ -43,7 +44,6 @@ exports.checkSite = function(req, res, next){
           console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
         else{
           extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(headerTimes){
-            console.log(JSON.stringify(headerTimes))
             req.schedule = headerTimes
           });
         }
@@ -136,3 +136,17 @@ var extractScheduleHeaders = function(dom,  callback){
   }
   callback(timeframe);
 };
+
+
+exports.goHome = function(req, res){
+  res.redirect('/');
+}
+
+exports.getUser = function(req,res,next){
+  var myuser = req.session.user
+  //if(req.session.user == null){
+  //  req.session.user = {displayName: "Guest"}
+  //}
+  return next()
+}
+
