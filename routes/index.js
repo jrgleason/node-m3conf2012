@@ -44,6 +44,7 @@ exports.checkSite = function(req, res, next){
           console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
         else{
           extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(headerTimes){
+            console.log(JSON.stringify(headerTimes))
             req.schedule = headerTimes
           });
         }
