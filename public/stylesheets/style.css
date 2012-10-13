@@ -174,3 +174,38 @@ a {
 #times .time .classes .class {
   margin-left: 10px;
 }
+table#classSchedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 100%;
+  display: table;
+  margin-top: 4px;
+  border-spacing: 2px;
+  border-color: #808080;
+  color: #000;
+}
+table#classSchedule tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+table#classSchedule tbody tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+table#classSchedule tbody tr th {
+  font-size: 1.2em;
+  border: 1px solid #789aa1;
+  padding: 3px 7px 2px 7px;
+  text-align: left;
+  background-color: #789aa1;
+  color: #fff;
+}
+table#classSchedule tbody tr td {
+  border: 1px solid #789aa1;
+  padding: 3px 7px 2px 7px;
+}
+table#classSchedule tbody tr:nth-child(2n+1) {
+  background-color: #cfeaea;
+}

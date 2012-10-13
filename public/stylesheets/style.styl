@@ -1,3 +1,7 @@
+m3-light-blue = #CFEAEA;
+m3-dark-blue = #789AA1
+//m3-orange = 
+
 body 
   background: url(/images/background.jpg)
   background-repeat: repeat
@@ -138,6 +142,7 @@ a
     min-height: 800px
     padding-left: 10px
     padding-top:10px
+
   #rightbar
     float: left
     width: 190px
@@ -152,3 +157,41 @@ a
     .classes
       .class
         margin-left: 10px
+
+table#classSchedule
+  //display:none  Can remove the class schedule completely by displaying none.  If the mobile version doesn't want it it can do that here.
+  //font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%
+  border-collapse: collapse
+  font-size: 100%;
+  display: table;
+  margin-top: 4px;
+  border-spacing: 2px;
+  border-color: gray;
+  color: black;
+  
+  tbody
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    tr
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+      
+      th
+        font-size: 1.2em;
+        border: 1px solid m3-dark-blue;
+        padding: 3px 7px 2px 7px;
+        text-align: left;
+        background-color: m3-dark-blue;
+        color: white; 
+
+      td
+        border: 1px solid m3-dark-blue;
+        padding: 3px 7px 2px 7px;
+   
+    tr:nth-child(2n+1)
+      background-color: m3-light-blue;
+  
