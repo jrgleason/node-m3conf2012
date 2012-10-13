@@ -48,7 +48,7 @@ app.configure('development', function(){
   }));
 });
 
-app.get('/',routes.checkSite,routes.getUser,routes.index);
+app.get('/',routes.checkSite, mongo.getSchedule ,routes.index);
 app.get('/users', user.list);
 app.get('/class/add', routes.addClass)
 app.get('/auth/google', google.requestCode) 
