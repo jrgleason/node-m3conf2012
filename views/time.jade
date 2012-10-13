@@ -1,6 +1,14 @@
+script
+  $(document).ready(function() {
+    $( ".draggable" ).draggable({
+      helper: "clone",
+      cursor: "move"
+    });
+  });
+
 #times
    ul
-     - each time in schedule
+     - each time in siteSchedule
        .time
          li
            h1 #{time.startTime} to #{time.endTime}
@@ -9,4 +17,5 @@
                  - each m3class in time.classes
                    .class
                      li
-                       a(href="#") #{m3class.className}
+                       .draggable.ui-widget-content
+                         a(href="#") #{m3class.className}

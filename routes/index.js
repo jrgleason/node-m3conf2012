@@ -8,7 +8,8 @@ exports.index = function(req, res){
   res.render('index', 
     { 
       title: 'Express', 
-      schedule: req.schedule, 
+      siteSchedule: req.schedule,
+      schedule: req.session.schedule, 
       userinfo: req.session.user 
     });
 };
@@ -141,13 +142,5 @@ var extractScheduleHeaders = function(dom,  callback){
 
 exports.goHome = function(req, res){
   res.redirect('/');
-}
-
-exports.getUser = function(req,res,next){
-  var myuser = req.session.user
-  //if(req.session.user == null){
-  //  req.session.user = {displayName: "Guest"}
-  //}
-  return next()
 }
 
