@@ -11,24 +11,19 @@ html
       block leftheader
         #header
           #logo
-            h1 
-              a(href="/") 
-                span M3Conf Schedulr
+            h1
+              img(src="/images/m3_logo.png") 
           #mobileMenu
             p Menu
       #nav
-        #menu
-          ul
-            li
-              a(href="/") Home
-            li
-              a(href="/class/add") Add Class
-            li
-              include logon
-        #submenu
-          ul
-            li 
-              a(href="#") Test1
+        #date 2012
+        #line1 M3 Conference
+        #line2 Class Scheduler
+        //
+        //  #menu
+        //    ul
+        //      li
+        //       include logon
       #content
         #leftbar
           block left
@@ -36,7 +31,6 @@ html
           block middle
         #rightbar
           block right
-            h1 ads here
             a(href="http://www.m3conf.com")
               img(src="/images/M3ad.png")
         
