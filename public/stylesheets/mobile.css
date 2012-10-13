@@ -24,6 +24,9 @@
     border: 0 solid #000;
     height: 50px;
   }
+  #header #logo h1 img {
+    display: none;
+  }
   #header #logo h1 a {
     height: 50px;
   }

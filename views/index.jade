@@ -14,15 +14,3 @@ block append middle
         span  - 
         Feel Free to Schedule!
 
-
-if userinfo == null
-  #logon
-    .signIn
-      a(href="/auth/google") Sign in with Google
-
-else
-  #logon
-    .message
-      h4 Welcome #{userinfo.name}
-    .logout
-      a(href="/logout") Logout

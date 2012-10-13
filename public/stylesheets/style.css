@@ -28,7 +28,6 @@ a {
   width: 240px;
   height: 120px;
   position: relative;
-  border-bottom: 1px solid #066;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
@@ -64,7 +63,6 @@ a {
   width: 790px;
   margin-right: 10px;
   color: #003;
-  border-bottom: 1px solid #066;
 }
 #nav #date {
   float: left;
@@ -108,7 +106,6 @@ a {
   padding: 3px 0;
 }
 #nav #menu li a {
-  border-left: 1px solid #ddd;
   padding: 0 0 6px 4px;
   width: 85px;
   color: #003;
@@ -140,6 +137,7 @@ a {
   clear: both;
   min-height: 1000px;
   width: 1060px;
+  border-top: 1px solid #066;
 }
 #content #leftbar {
   float: left;
