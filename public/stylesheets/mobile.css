@@ -45,3 +45,6 @@
     text-align: center;
   }
 }
+table#classSchedule {
+  width: 400px;
+}
