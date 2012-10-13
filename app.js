@@ -9,6 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , google = require('./lib/google/interface')
+  , mongo = require('./lib/data/interface')
   , GOOGLE_CLIENT_ID = "845535169674-4d2cuan06ueva581lk9c2r3osk4jeeca.apps.googleusercontent.com"
   , GOOGLE_CLIENT_SECRET = "nFCjakDdu4-f1QbrWwDVyjeA"
   , REDIRECT_URL_DOMAIN = process.env.OPENSHIFT_APP_DNS || 'localhost:3000'
@@ -26,6 +27,11 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
+  app.use(express.cookieParser("TheOhioStateBuckeyes"))
+  app.use(express.session(
+    {
+      secret: "TheOhioStateBuckeyes",
+    }));
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
@@ -42,13 +48,16 @@ app.configure('development', function(){
   }));
 });
 
-app.get('/',routes.checkSite,routes.index);
+app.get('/',routes.checkSite,routes.getUser,routes.index);
 app.get('/users', user.list);
 app.get('/class/add', routes.addClass)
 app.get('/auth/google', google.requestCode) 
 app.get('/auth/google/getToken' 
         , google.callbackHandler 
-        , google.getUserInformation)
+        , google.getUserInformation
+        , mongo.getUserByDisplayName
+        , routes.goHome)
+app.get('/logout',google.logout,routes.goHome)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
