@@ -10,7 +10,9 @@ block append middle
          to Create Schedule!
     else
       h1
-        a(href="/logout") Logout
-        span  - 
-        Feel Free to Schedule!
+        ul
+          li
+            a(href="/logout") Logout
+          li
+            a(href="/schedule/save") Save
       include mySchedule 
