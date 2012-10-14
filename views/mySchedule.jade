@@ -2,10 +2,13 @@ script
   $(document).ready(function() {
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
-        alert("Quit dropping stuff on me");
+        var id = $( this ).find(".id").attr("value");
+        var className = ui.draggable.find("a").attr("value");
+        window.location.href = "/schedule/addClass?classname="+className+"&id="+id;
       }
     });
-  }); 
+  });
+
 
 - each day in schedule.days
   h3= day.name
@@ -17,5 +20,7 @@ script
         - each time in day.times
           tr
             td #{time.startTime} - #{time.endTime}
-            td.droppable #{time.class}
+            td.droppable #{time.className}
+              .id(style="display:none", value="#{time._id}")
+
 

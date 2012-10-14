@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  //console.log(req.session.user.name)
+  console.log(JSON.stringify(req.session.schedule))
   res.render('index', 
     { 
       title: 'Express', 
@@ -13,9 +13,34 @@ exports.index = function(req, res){
       userinfo: req.session.user 
     });
 };
+
 exports.addClass = function(req, res){
   res.render('newclass', { title: 'Express' });
 };
+
+
+
+exports.addClassToTime = function(req,res,next){
+  var schedule = req.session.schedule
+  var id = req.query["id"]
+  var className = req.query["classname"]
+  schedule.days.forEach(function(day){
+    day.times.forEach(function(time){
+      if(time._id.toString() == id){
+        console.log("Found!")
+        console.log("Adding className:"+className)
+        time.className = className
+        console.log("After: time:"+JSON.stringify(time)+" Schedule: "+JSON.stringify(schedule));
+      }
+    })
+  }) 
+  return next()
+}
+
+
+
+
+//Parsing stuff
 //var $ = require('jquery'),
 var http = require('http'),
     querystring = require('querystring'),
@@ -45,7 +70,6 @@ exports.checkSite = function(req, res, next){
           console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
         else{
           extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(headerTimes){
-            console.log(JSON.stringify(headerTimes))
             req.schedule = headerTimes
           });
         }

@@ -58,6 +58,7 @@ app.get('/auth/google/getToken'
         , mongo.getUserByDisplayName
         , routes.goHome)
 app.get('/logout',google.logout,routes.goHome)
+app.get('/schedule/addClass',routes.addClassToTime, routes.goHome)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
