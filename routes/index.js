@@ -134,9 +134,9 @@ var extractScheduleHeaders = function(dom,  callback){
         }
         //TODO: extract out to method
         else{
-          if(tuple.children[0].raw != "Break"){
-            time.classes.push({className:tuple.children[0].raw});
-          }
+          //if(tuple.children[0].raw != "Break"){
+          //  time.classes.push({className:tuple.children[0].raw});
+          //}
         }
       }
 
@@ -150,17 +150,22 @@ var extractScheduleHeaders = function(dom,  callback){
               })
             }
           }
-          else{
-            time.classes.push({
-              className:tuple.children[0].data
-            });
-          }
         }
       }
       
     }
   }
-  callback(timeframe);
+  var newTimeframe = []
+  for( var i in timeframe){
+    var time = timeframe[i]
+    if (time.classes === undefined || time.classes.length <1){
+      //uh I dunno
+    } 
+    else{
+      newTimeframe.push(time);
+    }
+  }
+  callback(newTimeframe);
 };
 
 
