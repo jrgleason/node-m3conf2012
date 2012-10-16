@@ -4,11 +4,10 @@
  */
 
 exports.index = function(req, res){
-  console.log(JSON.stringify(req.session.schedule))
   res.render('index', 
     { 
       title: 'Express', 
-      siteSchedule: req.schedule,
+      days: req.days,
       schedule: req.session.schedule, 
       userinfo: req.session.user 
     });
@@ -69,8 +68,9 @@ exports.checkSite = function(req, res, next){
         if(checkSiteHtmlParserHandler.error == undefined)
           console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
         else{
-          extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(headerTimes){
-            req.schedule = headerTimes
+          extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(days){
+            console.log(JSON.stringify(days))
+            req.days = days
           });
         }
         return next();
@@ -100,72 +100,76 @@ var checkSiteHtmlParserHandler = new htmlparser.DefaultHandler(function(error, d
 });
 
 var extractScheduleHeaders = function(dom,  callback){
-  var schedule = htmlparser.DomUtils.getElements({class:"schedule"}, dom);
-  var scheduleRows = htmlparser.DomUtils.getElements({tag_name:"tr"}, schedule)
-  var timeframe = []
-
-  for (var sri in scheduleRows){
-    var isStartDate = true;
-    var time={classes:[]};
-
-    var row = scheduleRows[sri]
-    var tuples = htmlparser.DomUtils.getElements({tag_name:"td"}, row)
-    for (var ti in tuples){
-      var tuple = tuples[ti]
-      if(tuple.attribs != undefined){
-        var classMatches = tuple.attribs.class.match(/rowHeader/g)
-        if( classMatches != null){
-          for (var childi in tuple.children){
-            var child = tuple.children[childi];
-            var brMatches = child.raw.match(/[Bb][Rr]/g)
-            if( brMatches == undefined){
-              var value = JSON.stringify(child.raw).replace(/\\n[ ]+/g, '').replace(/\"/g,''); 
-              if(isStartDate){
-                time.startTime = value;
-                isStartDate = false;
-              }
-              else{
-                time.endTime = value;
-                timeframe.push(time);
-                isStartDate = true;
-              }
-            } 
+  var days = []
+  var currDay = 1
+  var schedules = htmlparser.DomUtils.getElements({class:"schedule"}, dom);
+  for (var scheduleId in schedules){
+    var schedule = schedules[scheduleId]
+    var day = {name:"Day "+currDay}
+    currDay = currDay+1
+    var scheduleRows = htmlparser.DomUtils.getElements({tag_name:"tr"}, schedule)
+    day.times = []
+    for (var sri in scheduleRows){
+      var isStartDate = true;
+      var row = scheduleRows[sri]
+      var tuples = htmlparser.DomUtils.getElements({tag_name:"td"}, row)
+      var time={classes:[]};
+      var previousTime
+      for (var ti in tuples){
+        var tuple = tuples[ti]
+        if(tuple.attribs != undefined){
+          var classMatches = tuple.attribs.class.match(/rowHeader/g)
+          if( classMatches != null){
+            for (var childi in tuple.children){
+              var child = tuple.children[childi];
+              var brMatches = child.raw.match(/[Bb][Rr]/g)
+              if( brMatches == undefined){
+                var value = JSON.stringify(child.raw).replace(/\\n[ ]+/g, '').replace(/\"/g,''); 
+                if(isStartDate){
+                  time.startTime = value;
+                  isStartDate = false;
+                }
+                else{
+                  time.endTime = value;
+                  isStartDate = true;
+                }
+              } 
+            }
           }
         }
-        //TODO: extract out to method
         else{
-          //if(tuple.children[0].raw != "Break"){
-          //  time.classes.push({className:tuple.children[0].raw});
-          //}
-        }
-      }
-
-      else{
-        if(tuple.children[0].raw != "Break"){
-          if(tuple.children[0].name = "a"){
-            var ahreftxt = tuple.children[0].children
-            for (var childi in ahreftxt){
-              time.classes.push({
-                className:ahreftxt[childi].data
-              })
+          if(tuple.children[0].raw != "Break"){
+            if(tuple.children[0].name = "a"){
+              var ahreftxt = tuple.children[0].children
+              for (var childi in ahreftxt){
+                time.classes.push({
+                  className:ahreftxt[childi].data
+                })
+              }
             }
           }
         }
       }
+      if(previousTime === undefined){
       
+      }
+      else{
+        if( previousTime.startTime == time.startTime ){
+          time = undefined
+        }
+      }
+      if (time === undefined || time.classes === undefined || time.classes.length <1){
+        //uh I dunno
+      }
+      else{
+        day.times.push(time);
+      } 
+      previousTime = time
+      console.log("Times: "+JSON.stringify(day.times))
     }
+    days.push(day)
   }
-  var newTimeframe = []
-  for( var i in timeframe){
-    var time = timeframe[i]
-    if (time.classes === undefined || time.classes.length <1){
-      //uh I dunno
-    } 
-    else{
-      newTimeframe.push(time);
-    }
-  }
-  callback(newTimeframe);
+  callback(days);
 };
 
 

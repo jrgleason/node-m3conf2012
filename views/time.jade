@@ -5,17 +5,20 @@ script
       cursor: "move"
     });
   });
-
-#times
-   ul
-     - each time in siteSchedule
-       .time
-         li
-           h1 #{time.startTime} to #{time.endTime}
-             .classes
-               ul
-                 - each m3class in time.classes
-                   .class
-                     li
-                       .draggable.ui-widget-content
-                         a(href="#", value="#{m3class.className}") #{m3class.className}
+#days
+  ul
+    - each day in days
+      li
+        #times
+          ul
+            - each time in day.times
+              .time
+                li
+                  h1 #{time.startTime} to #{time.endTime}
+                    .classes
+                      ul
+                        - each m3class in time.classes
+                          .class
+                            li
+                              .draggable.ui-widget-content
+                                a(href="#", value="#{m3class.className}") #{m3class.className}
