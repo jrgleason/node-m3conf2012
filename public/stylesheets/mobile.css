@@ -44,6 +44,9 @@
     clear: both;
     text-align: center;
   }
+  #mobileHeader #mobileHeaderContent div select {
+    width: 100px;
+  }
   #mobileMenu {
     float: right;
     margin-right: 15px;

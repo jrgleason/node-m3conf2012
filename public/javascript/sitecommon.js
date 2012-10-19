@@ -1,3 +1,5 @@
+var className,
+    dayTime;
 
 $(document).ready(function() {
   $( "#mobileMenu" ).click(
@@ -17,7 +19,8 @@ $(document).ready(function() {
     function(){
       $('.classselect').addClass("invisibleClass");
       var value = $(this).val();
-      $("#selectTime").val(value)
+      $("#selectTime").val(value);
+      dayTime = value;
       $("#"+value).toggleClass("invisibleClass");
     }
   );
@@ -25,12 +28,13 @@ $(document).ready(function() {
     function(){
       var value = $(this).val();
       $("#selectClass").val(value);
+      className = value;
       $('#submitMobile').toggleClass('invisible');
     }
   );
   $('#submitMobile').click(
     function(){
-      $('#mobileform').submit();
+      window.location.href="/schedule/addClass?classname="+className+"&dayTime="+dayTime;
     }
   );
 });

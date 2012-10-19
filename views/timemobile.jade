@@ -22,4 +22,5 @@ form#mobileform(action="#")
                 option Select One
                 - each m3class in time.classes
                   option(id="class#{dayi}",value="#{m3class.className}") #{m3class.className}
-  button#submitMobile.invisible Add To Schedule
+  #submitLink
+    a#submitMobile.invisible Add To Schedule

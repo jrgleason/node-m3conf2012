@@ -23,16 +23,26 @@ exports.addClassToTime = function(req,res,next){
   var schedule = req.session.schedule
   var id = req.query["id"]
   var className = req.query["classname"]
-  schedule.days.forEach(function(day){
-    day.times.forEach(function(time){
-      if(time._id.toString() == id){
-        console.log("Found!")
-        console.log("Adding className:"+className)
-        time.className = className
-        console.log("After: time:"+JSON.stringify(time)+" Schedule: "+JSON.stringify(schedule));
-      }
+  var dayTime = req.query["dayTime"]
+  if( id === undefined ){
+    var time = dayTime.charAt(1)
+    var day = dayTime.charAt(0)
+    var time = schedule.days[day].times[time]
+    time.className = className
+  }
+  else{
+    schedule.days.forEach(function(day){
+      day.times.forEach(function(time){
+        if(time._id.toString() == id){
+          //console.log("Found!")
+          //console.log("Adding className:"+className)
+          time.className = className
+          //console.log("After: time:"+JSON.stringify(time)+" Schedule: "+JSON.stringify(schedule));
+        }
+      })
     })
-  }) 
+  }
+   
   return next()
 }
 
@@ -69,7 +79,7 @@ exports.checkSite = function(req, res, next){
           console.log("There was an error "+JSON.stringify(checkSiteHtmlParserHandler.error))
         else{
           extractScheduleHeaders(checkSiteHtmlParserHandler.dom, function(days){
-            console.log(JSON.stringify(days))
+            //console.log(JSON.stringify(days))
             req.days = days
           });
         }
@@ -165,7 +175,7 @@ var extractScheduleHeaders = function(dom,  callback){
         day.times.push(time);
       } 
       previousTime = time
-      console.log("Times: "+JSON.stringify(day.times))
+      //console.log("Times: "+JSON.stringify(day.times))
     }
     days.push(day)
   }

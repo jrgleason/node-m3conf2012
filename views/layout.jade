@@ -13,17 +13,19 @@ html
       meta(name='viewport',content='width=device-width,initial-scale=1')
   body
     #wrapper
-      #mobileHeader
-        #mobileHeaderContent.invisible
-          include timemobile
+      if (userinfo != null)
+        #mobileHeader
+          #mobileHeaderContent.invisible
+            include timemobile
       block leftheader
         #header
           #logo
             h1
               img(src="/images/m3_logo.png") 
-          #mobileMenu
-            p 
-              a(href="#") Add Class
+          if (userinfo != null)
+            #mobileMenu
+              p 
+                a(href="#") Add Class
       #nav
         #date 2012
         #line1 M3 Conference
