@@ -24,6 +24,18 @@ a {
   -webkit-box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
   box-shadow: 0 0 20px 5px rgba(0,0,0,0.5);
 }
+.invisible {
+  display: none;
+}
+.invisibleClass {
+  display: none;
+}
+#mobileHeader {
+  display: none;
+}
+#mobileMenu {
+  display: none;
+}
 #header {
   width: 240px;
   height: 120px;
@@ -33,9 +45,6 @@ a {
   margin-left: 10px;
   clear: both;
   z-index: 6;
-}
-#header #mobileMenu {
-  display: none;
 }
 #header h1 {
   font-size: 24px;

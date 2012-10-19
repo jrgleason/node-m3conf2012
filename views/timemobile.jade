@@ -1,0 +1,19 @@
+form(action="#")
+  #days
+    - each day, dayi in days
+      h2 #{day.name}
+        select#timeSelect
+          - each time, timei in day.times
+            option(value="#{dayi}#{timei}")
+                h1 #{time.startTime} to #{time.endTime}
+        - each time, timei in day.times
+          - if (timei==0)
+            div(id="#{dayi}#{timei}")
+              - each m3class in time.classes
+                label #{m3class.className}
+                input(type="radio", name="class")
+          - else
+            .invisibleClass(id="#{dayi}#{timei}")
+              - each m3class in time.classes
+                label #{m3class.className}
+                  input(type="radio", name="class")

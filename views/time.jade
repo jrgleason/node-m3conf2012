@@ -1,25 +1,24 @@
-script
-  $(document).ready(function() {
-    $( ".draggable" ).draggable({
-      helper: "clone",
-      cursor: "move"
-    });
-  });
+// script
+//  $(document).ready(function() {
+//    $( ".draggable" ).draggable({
+//      helper: "clone",
+//      cursor: "move"
+//    });
+//    $("#accordion" ).accordion();
+//  });
 #days
   ul
     - each day in days
       li
         h2= day.name
-        #times
-          ul
-            - each time in day.times
-              .time
-                li
-                  h1 #{time.startTime} to #{time.endTime}
-                    .classes
-                      ul
-                        - each m3class in time.classes
-                          .class
-                            li
-                              .draggable.ui-widget-content
-                                a(href="#", value="#{m3class.className}") #{m3class.className}
+        #times#accordion
+          - each time in day.times
+            .time
+              h1 #{time.startTime} to #{time.endTime}
+                .classes
+                  ul
+                    - each m3class in time.classes
+                      .class
+                        li
+                          .draggable.ui-widget-content
+                            a(href="#", value="#{m3class.className}") #{m3class.className}

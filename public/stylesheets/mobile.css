@@ -29,7 +29,12 @@
   #header #logo h1 a {
     height: 50px;
   }
-  #header #mobileMenu {
+  #mobileHeader {
+    height: 150px;
+    display: inline;
+    overflow: hidden;
+  }
+  #mobileMenu {
     float: right;
     margin-right: 15px;
     margin-top: 5px;
@@ -37,10 +42,10 @@
     width: 80px;
     padding: 5px;
     height: 25px;
-    background-color: #808080;
     display: inline;
+    background-color: #808080;
   }
-  #header #mobileMenu p {
+  #mobileMenu p {
     line-height: 1.5em;
     text-align: center;
   }

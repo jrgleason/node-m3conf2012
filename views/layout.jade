@@ -9,8 +9,12 @@ html
       link(rel='stylesheet', href='/stylesheets/mobile.css')
       script(src='http://code.jquery.com/jquery-1.8.2.js')
       script(src='http://code.jquery.com/ui/1.9.0/jquery-ui.js')
+      script(src='/javascript/sitecommon.js')
   body
     #wrapper
+      #mobileHeader
+        #mobileHeaderContent.invisible
+          include timemobile
       block leftheader
         #header
           #logo
