@@ -2,7 +2,7 @@ form(action="#")
   #days
     - each day, dayi in days
       h2 #{day.name}
-        select#timeSelect
+        select.timeSelect
           - each time, timei in day.times
             option(value="#{dayi}#{timei}")
                 h1 #{time.startTime} to #{time.endTime}

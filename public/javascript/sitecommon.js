@@ -5,11 +5,11 @@ $(document).ready(function() {
       $("#mobileHeaderContent").toggleClass("invisible");
     }
   );
-  $('#timeSelect').change(
+  $('.timeSelect').change(
     function(){
       //$('.invisibleClass').toggleClass("invisibleClass");
-      var value = $("#timeSelect option:selected").val();
-      alert(Value);
+  //    var value = $("#timeSelect option:selected").val();
+      alert("test");
       //$(value).toggleClass("invisibleClass");
     }
   );
