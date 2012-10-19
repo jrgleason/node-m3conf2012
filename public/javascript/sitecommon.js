@@ -7,10 +7,10 @@ $(document).ready(function() {
   );
   $('.timeSelect').change(
     function(){
-      //$('.invisibleClass').toggleClass("invisibleClass");
-  //    var value = $("#timeSelect option:selected").val();
-      alert("test");
-      //$(value).toggleClass("invisibleClass");
+      $('.timemobile').addClass("invisibleClass");
+      var value = $(".timemobile option:selected").val();
+      alert("#"+value);
+      $("#"+value).toggleClass("invisibleClass");
     }
   );
 });

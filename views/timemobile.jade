@@ -8,12 +8,12 @@ form(action="#")
                 h1 #{time.startTime} to #{time.endTime}
         - each time, timei in day.times
           - if (timei==0)
-            div(id="#{dayi}#{timei}")
+            div(id="#{dayi}#{timei}", class="timemobile")
               - each m3class in time.classes
                 label #{m3class.className}
                 input(type="radio", name="class")
           - else
-            .invisibleClass(id="#{dayi}#{timei}")
+            .invisibleClass.timemobile(id="#{dayi}#{timei}")
               - each m3class in time.classes
                 label #{m3class.className}
                   input(type="radio", name="class")
