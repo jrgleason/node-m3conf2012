@@ -1,24 +1,25 @@
 form#mobileform(action="#")
-  #mobiledays
-    input(type="hidden", id="selectDay")
-    input(type="hidden", id="selectTime")
-    input(type="hidden", id="selectClass")
-    
+  input(type="hidden", id="selectDay")
+  input(type="hidden", id="selectTime")
+  input(type="hidden", id="selectClass")
+  #mobiledays    
     select.dayselect
       option Select One
       - each day, dayi in days
         option(value="#{dayi}") #{day.name}
-    #mobiletimes
+  #mobiletimes
       - each day, dayi in days
-        select.timeselect(id="#{dayi}").invisibleTime
-          option Select One
-          - each time, timei in day.times
-            option(value="#{dayi}#{timei}")
-              h1 #{time.startTime} to #{time.endTime}
+        .selectList
+          select.timeselect(id="#{dayi}").invisibleTime
+            option Select One
+            - each time, timei in day.times
+              option(value="#{dayi}#{timei}")
+                h1 #{time.startTime} to #{time.endTime}
         #mobileclasses
           - each time, timei in day.times
-            select.classselect.invisibleClass(id="#{dayi}#{timei}")
-              option Select One
-              - each m3class in time.classes
-                option(id="class#{dayi}",value="#{m3class.className}") #{m3class.className}
+            .selectList
+              select.classselect.invisibleClass(id="#{dayi}#{timei}")
+                option Select One
+                - each m3class in time.classes
+                  option(id="class#{dayi}",value="#{m3class.className}") #{m3class.className}
   button#submitMobile.invisible Add To Schedule
