@@ -30,6 +30,9 @@ a {
 .invisibleClass {
   display: none;
 }
+.invisibleTime {
+  display: none;
+}
 #mobileHeader {
   display: none;
 }

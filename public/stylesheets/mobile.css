@@ -34,6 +34,10 @@
     display: inline;
     overflow: hidden;
   }
+  #mobileHeader select {
+    float: none;
+    clear: both;
+  }
   #mobileMenu {
     float: right;
     margin-right: 15px;

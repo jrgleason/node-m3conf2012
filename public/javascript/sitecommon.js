@@ -5,12 +5,32 @@ $(document).ready(function() {
       $("#mobileHeaderContent").toggleClass("invisible");
     }
   );
-  $('.timeSelect').change(
+  $('.dayselect').change(
     function(){
-      $('.timemobile').addClass("invisibleClass");
-      var value = $(".timemobile option:selected").val();
-      alert("#"+value);
+      $('.timeselect').addClass("invisibleTime");
+      var value = $(this).val();
+      $("#selectDay").val(value);
+      $("#"+value).toggleClass("invisibleTime");
+    }
+  );
+  $('.timeselect').change(
+    function(){
+      $('.classselect').addClass("invisibleClass");
+      var value = $(this).val();
+      $("#selectTime").val(value)
       $("#"+value).toggleClass("invisibleClass");
+    }
+  );
+  $('.classselect').change(
+    function(){
+      var value = $(this).val();
+      $("#selectClass").val(value);
+      $('#submitMobile').toggleClass('invisible');
+    }
+  );
+  $('#submitMobile').click(
+    function(){
+      $('#mobileform').submit();
     }
   );
 });
