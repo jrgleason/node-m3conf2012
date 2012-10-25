@@ -23,4 +23,5 @@ form#mobileform(action="#")
                 - each m3class in time.classes
                   option(id="class#{dayi}",value="#{m3class.className}") #{m3class.className}
   #submitLink
-    a#submitMobile.invisible Add To Schedule
+    a#submitMobile.invisible 
+      img(src='/images/Plus.png')

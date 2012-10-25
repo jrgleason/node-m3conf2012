@@ -2,15 +2,26 @@ doctype 5
 html
   head
     block head
-      title= title
-      link(rel='stylesheet', href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css')
+      title M3Conf Scheduler
       link(rel='stylesheet', href='/stylesheets/style.css')
       link(rel='stylesheet', href='/stylesheets/tablet.css')
       link(rel='stylesheet', href='/stylesheets/mobile.css')
+      link(rel='stylesheet', href='http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css')
       script(src='http://code.jquery.com/jquery-1.8.2.js')
       script(src='http://code.jquery.com/ui/1.9.0/jquery-ui.js')
       script(src='/javascript/sitecommon.js')
+      script(src='/javascript/jquery.ui.touch-punch.min.js')
       meta(name='viewport',content='width=device-width,initial-scale=1')
+      
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35753209-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
   body
     #wrapper
       if (userinfo != null)

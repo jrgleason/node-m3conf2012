@@ -1,23 +1,19 @@
 script
   $(document).ready(function() {
+    $( ".accordion" ).accordion();
     $( ".draggable" ).draggable({
       helper: "clone",
       cursor: "move"
     });
   });
 #days
-  ul
-    - each day in days
-      li
-        h2= day.name
-        #times#accordion
-          - each time in day.times
-            .time
-              h1 #{time.startTime} to #{time.endTime}
-                .classes
-                  ul
-                    - each m3class in time.classes
-                      .class
-                        li
-                          .draggable.ui-widget-content
-                            a(href="#", value="#{m3class.className}") #{m3class.className}
+  - each day in days
+    h3= day.name
+      .accordion
+        - each time in day.times
+          p #{time.startTime} to #{time.endTime}
+          div
+            - each m3class in time.classes
+              .draggable.ui-widget-content.aclass
+                a(href="#", value="#{m3class.className}") #{m3class.className}
+

@@ -5,14 +5,12 @@ block append left
 block append middle
   div#tmpId
     if userinfo == null
-      h1 Please 
-         a(href="/auth/google") Sign in 
-         to Create Schedule!
+      #mobileLogin
+        a(href="/auth/google") 
+          img(src='/images/google.png')
+      #regLogin
+        h1 Please 
+          a(href="/auth/google") Sign in Using Google to Create Schedule!
     else
-      h1
-        ul
-          li
-            a(href="/logout") Logout
-          li
-            a(href="/schedule/save") Save
+      a(href="/logout") Logout
       include mySchedule 

@@ -19,8 +19,8 @@ script
           th Class Name
         - each time in day.times
           tr
-            td #{time.startTime} - #{time.endTime}
-            td.droppable #{time.className}
+            td.time #{time.startTime} - #{time.endTime}
+            td.droppable.dropClass #{time.className}
               .id(style="display:none", value="#{time._id}")
 
 

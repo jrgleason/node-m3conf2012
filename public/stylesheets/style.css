@@ -221,3 +221,12 @@ table#classSchedule tbody tr td {
 table#classSchedule tbody tr:nth-child(2n+1) {
   background-color: #cfeaea;
 }
+#mobileLogin {
+  display: none;
+}
+.accordion p {
+  font-size: 75%;
+}
+.aclass a {
+  font-size: 60%;
+}

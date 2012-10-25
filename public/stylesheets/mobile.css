@@ -3,24 +3,35 @@
     margin-top: 0;
     margin-left: 10px;
     margin-right: 10px;
-    width: 450px;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
   }
   #nav {
     display: none;
   }
+  #content {
+    width: 350px;
+  }
   #content #leftbar {
     display: none;
   }
+  #content #middlebar {
+    width: 330px;
+    padding-right: 10px;
+    padding-left: 0;
+  }
   #header {
-    width: 430px;
+    display: inline;
+    width: 330px;
     height: 50px;
   }
   #header #logo {
     float: left;
-    width: 300px;
+    width: 100px;
+    display: inline;
   }
   #header #logo h1 {
-    border: 0 solid #000;
     height: 50px;
   }
   #header #logo h1 img {
@@ -33,6 +44,7 @@
     height: 150px;
     display: inline;
     overflow: hidden;
+    background-color: #808080;
   }
   #mobileHeader #mobileHeaderContent {
     margin-left: 10px;
@@ -46,6 +58,7 @@
   }
   #mobileHeader #mobileHeaderContent div select {
     width: 100px;
+    height: 50px;
   }
   #mobileMenu {
     float: right;
@@ -63,6 +76,17 @@
     text-align: center;
   }
   table#classSchedule {
-    width: 400px;
+    width: 330px;
+  }
+  #mobileLogin {
+    display: inline;
+    width: 100%;
+  }
+  #mobileLogin img {
+    width: 150px;
+    margin-left: 90px;
+  }
+  #regLogin {
+    text-align: center;
   }
 }
